@@ -119,6 +119,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.gatt.enabled?=true \
 	bluetooth.profile.hap.client.enabled?=true \
 	bluetooth.profile.hfp.ag.enabled?=true \
+	bluetooth.hfp.codec_aptx_voice.enabled?=false \
 	bluetooth.profile.hid.device.enabled?=true \
 	bluetooth.profile.hid.host.enabled?=true \
 	bluetooth.profile.map.server.enabled?=true \
