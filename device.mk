@@ -660,6 +660,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# Properties
+TARGET_PRODUCT_PROP += device/google/zuma/product.prop
+TARGET_SYSTEM_PROP += device/google/zuma/system.prop
+
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringOverlay
