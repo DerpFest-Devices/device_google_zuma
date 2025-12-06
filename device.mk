@@ -638,9 +638,6 @@ $(call inherit-product-if-exists, vendor/google/camera/config.mk)
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
-# Google Assistant
-PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
-
 # Lineage Health
 include hardware/google/pixel/lineage_health/device.mk
 
