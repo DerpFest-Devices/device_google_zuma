@@ -668,9 +668,6 @@ PRODUCT_PACKAGES += \
 # Touch
 include hardware/google/pixel/touch/device.mk
 
-# Face Unlock
-include vendor/google/faceunlock/device.mk
-
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     device/google/zuma/vintf/vendor_framework_compatibility_matrix.xml
