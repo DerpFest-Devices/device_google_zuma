@@ -671,8 +671,6 @@ include hardware/google/pixel/touch/device.mk
 include vendor/google/faceunlock/device.mk
 
 # VINTF
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/google/zuma/vintf/vendor_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += \
     device/google/zuma/vintf/manifest.xml
 DEVICE_MATRIX_FILE += \
