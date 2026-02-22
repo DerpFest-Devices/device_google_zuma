@@ -300,6 +300,10 @@ include hardware/google/pixel/HardwareInfo/HardwareInfo.mk
 PRODUCT_COPY_FILES += \
     device/google/zuma/allowlist_com.google.android.as.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.google.android.as.xml
 
+# Android Verified Boot
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
+
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
     ANGLE
@@ -390,10 +394,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GoogleParts
 
-# RemovePackages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Properties
 TARGET_PRODUCT_PROP += device/google/zuma/product.prop
 TARGET_SYSTEM_EXT_PROP += device/google/zuma/system_ext.prop
@@ -410,6 +410,10 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
+
+# Telephony
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.carrierlock.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.carrierlock.xml
 
 # Touch
 include hardware/google/pixel/touch/device.mk
@@ -431,5 +435,12 @@ DEVICE_MATRIX_FILE += \
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
     device/google/zuma/vintf/device_framework_matrix_product.xml
 
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST := \
     system/priv-app/RemovePackages/RemovePackages.apk
+
+# ZRAM writeback
+include hardware/google/pixel/mm/device_gki.mk
