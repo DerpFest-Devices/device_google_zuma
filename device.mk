@@ -668,6 +668,10 @@ include hardware/google/pixel/touch/device.mk
 # Face Unlock
 include vendor/google/faceunlock/device.mk
 
+# Viper4FX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+$(call inherit-product, hardware/interfaces/audio/aidl/default/audio_effects.mk)
+
 # VINTF
 DEVICE_MANIFEST_FILE += \
     device/google/zuma/vintf/manifest.xml
